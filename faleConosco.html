@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Fale Conosco</title>
+  </head>
+  <body>
+    <style>
+      div {
+        margin: 5px;
+      }
+      body {
+        height: 2000px;
+      }
+        /* Chrome, Safari, Edge, Opera */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+    <h2>Fale Conosco</h2>
+
+    <form>
+      <h3>Dados Pessoais</h3>
+      <div>
+        <label for="nome">Nome: </label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite o seu nome"
+        />
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="" id="sobrenome" value="" />
+      </div>
+      <div>
+        <label for="cpf">CPF: </label>
+        <input type="tel" name="" id="cpf" maxlength="11" />
+        <label for="rg">RG: </label>
+        <input type="tel" id="rg" />
+      </div>
+      <div>
+        <label for="dataNasc">Data de Nascimento: </label>
+        <input type="date" name="dataNasc" id="" />
+        <label for="genero">Gênero: </label>
+        <input
+          type="radio"
+          value="M"
+          name="genero"
+          id=""
+          onclick="abrirOutros()"
+        />
+        Masculino
+        <input
+          type="radio"
+          value="F"
+          name="genero"
+          id=""
+          onclick="abrirOutros()"
+        />
+        Feminino
+        <input type="radio" name="genero" id="" onclick="abrirOutros()" />
+        Outros
+        <input type="text" id="outros" disabled />
+      </div>
+      <div>
+        <label for="nacionalidade">Nacionalidade: </label>
+        <select name="nacionalidade" id="pais" onclick="verEstados()">
+          <option value="" selected></option>
+          <option value="IQ">Iraque</option>
+          <option value="UC">Ucrania</option>
+          <option value="BR">Brasil</option>
+          <option value="VZ">Venezuela</option>
+        </select>
+        <label for="naturalidade" id="labelEstados" hidden
+          >Naturalidade:
+        </label>
+        <select name="naturalidade" id="estados" hidden>
+          <option value="" selected></option>
+        </select>
+      </div>
+      <div>
+        <label for="telefone">Telefone: </label>
+        <input type="tel" maxlength="9" name="telefone" />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="" />
+      </div>
+      <hr />
+      <h3>Dados Musicais</h3>
+      <div>
+        <p>Selecione os estilos Musicais Favoritos:</p>
+        <input type="checkbox" name="" id="" /> MPB
+        <input type="checkbox" name="" id="" checked /> Rock
+        <input type="checkbox" name="" id="" /> Pop
+        <input type="checkbox" name="" id="" /> Kpop
+        <input type="checkbox" name="" id="" /> Instrumental
+        <input type="checkbox" name="" id="" disabled /> Funk
+        <input type="checkbox" name="" id="" /> Brega
+        <input type="checkbox" name="" id="" /> Sertanejo
+      </div>
+      <hr />
+      <h3>Login</h3>
+      <div>
+        <label for="login">Login: </label>
+        <input type="text" name="login" />
+        
+        <div class="btn-group me-2" role="group" aria-label="First group">
+          <button id="btnicone" type="button" class="btn btn-primary mx-0"><i id="iconebtn" class="bi bi-eye"></i></button>
+          <button id="btnver" type="button" class="btn btn-primary" onclick="togglePass()">Ver</button>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-floating mb-3 col-3">
+          <input id="senha1" oninput ="compararSenha()" type="password" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2">Senha: </label>
+        </div>
+        <div class="form-floating mb-3 col-3">
+          <input id="senha2" oninput ="compararSenha()" type="password" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2">Confirme a Senha: </label>
+        </div>
+        <div class="col-3">
+          <span id="erroSenha"></span>
+        </div>       
+      </div>
+
+
+
+
+      <hr />
+      <div>
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+<hr>
+    <div>
+      <h3 class="ms-2"><i class="bi bi-house-add"></i> Endereço</h3>
+      <div class="row">
+        <div class="form-floating mb-3 col-3">
+          <input onfocus="limparCep()" id="cep"  type="number" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> CEP: </label>
+        </div>
+        <div class="col-3">
+          <button onclick="validarCep()" class="btn btn-lg btn-primary mt-1"><i class="bi bi-search"></i> Pesquisar</button>
+          <button onclick="digitarCep()"  class="btn btn-lg btn-primary mt-1"><i class="bi bi-fonts"></i> Digitar</button>
+        <button onclick="limparCampos()" class="btn btn-lg btn-primary mt-1"><i class="bi bi-trash3"></i> Limpar</button>
+        </div> 
+      </div>
+      <hr>
+      <div class="row">
+        <div class="form-floating mb-3 col-3">
+          <input disabled id="logradouro"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Logradouro: </label>
+        </div>    
+        <div class="form-floating mb-3 col-1">
+          <input disabled id="numero"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Numero:  </label>
+        </div> 
+        <div class="form-floating mb-3 col-3">
+          <input disabled id="complemento"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Complemento:  </label>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="form-floating mb-3 col-3">
+          <input disabled id="bairro"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Bairro: </label>
+        </div>    
+        <div class="form-floating mb-3 col-1">
+          <input disabled id="uf"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Uf:</label>
+        </div> 
+        <div class="form-floating mb-3 col-3">
+          <input disabled id="localidade"  type="text" class="form-control" name="floatingInput" placeholder="">
+          <label for="floatingInput" class="ms-2"> Localidade:  </label>
+        </div> 
+      </div>
+   
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="faleConosco.js"></script>
+  </body>
+</html>

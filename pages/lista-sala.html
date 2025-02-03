@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo/logob9-favcon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/styles/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/styles/geral.css" rel="stylesheet">
+    <title>Exercícios Algoritmos | borgonove.tech</title>
+</head>
+<body>
+    
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-blue">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="/index.html" class="navbar-brand">
+                    <img src="/assets/images/logo/logob9 branco.png" height="24px" alt="logo b9 tech">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link text-white-50">Portfólio</a>
+                        <a href="" class="nav-item nav-link text-white-50">Serviços</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Matérias</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Exercícios</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/listajs.html" class="dropdown-item">Javascript</a>
+                                <a href="/pages/lista-algoritmo.html" class="dropdown-item">Algoritmos</a>
+                                <a href="/pages/lista-sala.html" class="dropdown-item">Exercícios de Sala</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Utilidades</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/buscaCep.html" class="dropdown-item">Busca Cep</a>
+                                <a href="/pages/imc.html" class="dropdown-item">IMC</a>
+                                <a href="" class="dropdown-item">Sorteio Personalidades</a>
+                                <a href="" class="dropdown-item">Relógio de Prova</a>
+                                <a href="" class="dropdown-item">Timer de Prova</a>
+                            </div>
+                        </div>
+                        <a href="/pages/contact.html" class="nav-item nav-link text-white">Contato</a>
+                        <a href="/pages/me.html" class="nav-item nav-link text-white-50">Me</a>
+                        <a href="" class="nav-item nav-link text-white-50">Área de Membros</a>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <style>
+        .externo{
+            background-color: lightgray;
+        }
+        .interno{
+            background-color: #ffff;
+            border: 1px solid darkgray;
+            border-radius: 7px;
+        }
+    </style>
+    <!-- Hero Start -->
+    <div class="externo">
+
+    <div class="container-fluid pt-5 hero-header mb-2 bg-blue">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg align-self-center text-center text-lg-start mb-lg-5">
+                    <h2 class="display-4 text-white mb-4 animated slideInRight">
+                         <i class="bi bi-2-square display-1 text-white" >
+                                            </i> Exercícios Algoritmos - Sala de Aula</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <div class="container-lg py-5 wow fadeIn interno" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="row justify-content-center">
+               
+            <section>
+                <h2>Exercícios 1 - Entrada e Saída de Dados</h2>
+
+                <ol>
+                    <li>Imprima "Hello World!":
+                    <li>Escrever um programa no VisualG que exiba a mensagem "Olá, Mundo!" na tela.</li>
+                    <li>Criar um programa que mostre a frase "Estou aprendendo a programar no VisualG!" na tela.</li>
+                    <li>Desenvolver um programa que exiba o número 2024 na tela.</li>
+                    <li>Criar um programa que exiba a mensagem "O ano atual é 2024" na tela, combinando texto e números na saída.</li>
+                    <li>Escrever um programa que realiza uma operação matemática simples, como a soma de dois números, e exibe o resultado na tela.</li>
+                    <li>Demonstre como exibir "Primeira Linha" e "Segunda Linha" em linhas separadas com um único comando.</li>
+                    <li>Mostre como juntar as palavras "Visual" e "G" em uma única saída, formando "VisualG".</li>
+                    <li>Escreva um comando que exiba a frase "Ela disse: "Olá, mundo!"".</li> 
+                    <li>Demonstre como exibir "Item" seguido de uma tabulação e "Preço" na mesma linha.</li>
+                    <li>Mostre como exibir três frases diferentes, "Um", "Dois", e "Três", cada uma em sua própria linha, usando apenas um comando.</li>
+                    <li>Escreva um comando que exiba a seguinte saída: "C:\Arquivos\Programas".</li>
+                    <li>Mostre como apresentar a pergunta "Qual é o seu nome?" seguida por "Digite seu nome:" na linha seguinte.</li>
+                    <li>Demonstre como exibir a data "25/02/2024" em uma saída formatada.</li>
+                    <li>Escreva um comando que exiba os símbolos "+, -, *, /" em uma única linha, tratando-os como texto puro.</li>
+
+
+                </ol>
+            </section>
+            <section>
+                <h2>Exercícios 2 - Básica - Variáveis</h2>
+                <ol>
+                    <li>Criar um programa que armazena o nome do aluno em uma variável e o ano atual em outra. Em seguida exibir a seguinte mensagem: "Olá [Nome do Aluno] estamos no ano de 2024".</li>
+                    <li>Desenvolver um programa que solicita o primeiro e o último nome do usuário como entradas separadas e depois exibe uma mensagem de boas-vindas que inclui o nome completo do usuário.</li>
+                    <li>Escreva um programa no VisualG que solicita ao usuário dois números inteiros e em seguida exibe a soma desses dois números.</li>
+                    <li>Crie um algoritmo que converte uma temperatura dada em graus Celsius para Fahrenheit. O programa deve pedir ao usuário que insira a temperatura em Celsius e mostrar o resultado da conversão.</li>
+                    <li>Escrever um programa que solicita ao usuário quatro notas (podem ser decimais) de um aluno calcula a média dessas notas e exibe a média com uma mensagem indicativa como "A média do aluno é: [média]“.</li>
+                    <li>Escreva um programa que lê um número inteiro e exibe o dobro desse número.</li>
+                    <li>Desenvolva um algoritmo que calcula e mostra o perímetro de um retângulo a partir de sua largura e altura fornecidas pelo usuário.</li>
+                    <li>Crie um programa que pede ao usuário seu nome e sobrenome separadamente e em seguida exibe o nome completo.</li>
+                    <li>Implemente um algoritmo que calcula o salário líquido de um empregado a partir do salário bruto e o desconto do imposto ambos fornecidos pelo usuário.</li>
+                    <li>Desenvolva um programa que calcula o consumo médio de um veículo solicitando ao usuário a distância total percorrida (em quilômetros) e o total de combustível gasto (em litros).</li>
+                    <li>Crie um programa que converte um valor de tempo dado em horas para minutos.</li>
+                    <li>Escreva um programa que solicita ao usuário três números inteiros e em seguida exibe a soma desses números.</li>
+                    <li>Desenvolva um algoritmo que lê duas notas (valores reais) de um estudante calcula a média aritmética dessas notas e mostra o resultado.</li>
+                    <li>Implemente um programa que pede ao usuário para inserir dois números inteiros e exibe a diferença entre o maior e o menor número.</li>
+                    <li>Faça um programa que lê um número inteiro e mostra o quadrado desse número.</li>
+                    <li>Escreva um algoritmo que pede dois números reais ao usuário e mostra o produto (multiplicação) deles.</li>
+                    <li>Desenvolva um programa que solicita ao usuário dois números inteiros e exibe o resultado da divisão do primeiro pelo segundo bem como o resto da divisão.</li>
+                    <li>Implemente um algoritmo que converte um número de dias fornecido pelo usuário em segundos.</li>
+                    <li>Escreva um programa que solicita o preço de um produto e o percentual de desconto e mostra o valor do desconto e o preço final do produto.</li>
+                    <li>Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas para ela.</li>
+                    <li>Crie um programa que leia o nome e o salário de um funcionário mostrando no final uma mensagem.</li>
+                    <li>Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório entre eles.</li>
+                    <li>Faça um programa que leia um número inteiro e mostre o seu antecessor e seu sucessor.</li>
+                    <li>Crie um algoritmo que leia um número real e mostre na tela o seu dobro e a sua terça parte.</li>
+                    <li>Desenvolva um programa que leia uma distância em metros e mostre os valores relativos em outras medidas.</li>
+                    <li>Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar.</li>
+                    <li>Faça um algoritmo que leia a largura e altura de uma parede, calcule e mostre a área a ser pintada e a quantidade de tinta necessária para o serviço, sabendo que cada litro de tinta pinta uma área de 2metros quadrados.</li>
+                    <li>Desenvolva uma lógica que leia os valores de A, B e C de uma equação do segundo grau e mostre o valor de Delta.</li>
+                    <li>Crie um programa que leia o preço de um produto, calcule e mostre o seu PREÇO PROMOCIONAL com 5% de desconto.</li>
+                    <li>Faça um algoritmo que leia o salário de um funcionário, calcule e mostre o seu novo salário com 15% de aumento.</li>
+                    <li>A locadora de carros precisa da sua ajuda para cobrar seus serviços. Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço total a pagar, sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado.</li>
+                    <li>Crie um programa que leia o número de dias trabalhados em um mês e mostre o salário de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25 por hora trabalhada.</li>
+                    <li>Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.</li>
+                    <li>[DESAFIO] Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos dias de vida um fumante perderá e exiba o total em dias.</li>
+                    <li>[DESAFIO] Este exercício é apenas um desafio de lógica. Escreva um algoritmo que armazene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir (utilizando apenas atribuições entre variáveis) troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa. Ao final escrever os valores que ficaram armazenados nas variáveis.</li>
+                </ol>
+                
+            </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="/index.html" class="d-inline-block mb-3">
+                        <img src="/assets/images/logo/logob9 branco.png"   width="220px" alt="logo b9 tech">
+                    </a>
+                    <p class="mb-0">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões em realidade.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Fale Conosco</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Manaus, Am - Brasil</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+55 92 98510-7638</p>
+                    <p><i class="fa fa-envelope me-3"></i>contato@borgonove.tech</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/EricoBorgonove"><i class="fab bi-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://web.facebook.com/erico.borgonove"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/erico.borgonove"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/ericoborgonove/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Educação Tecnológica</h5>
+                    <a class="btn btn-link" href="">Ensino de Programação</a>
+                    <a class="btn btn-link" href="">Cursos Profissionalizantes</a>
+                    <a class="btn btn-link" href="">Educação a Distância</a>
+                    <a class="btn btn-link" href="">Criação de Portfólios</a>
+                    <a class="btn btn-link" href="">Aulas Particulares</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Nossos Serviços</h5>
+                    <a class="btn btn-link" href="">Desenvolvimento de Sites</a>
+                    <a class="btn btn-link" href="">Desenvolvimento de Aplicativos</a>
+                    <a class="btn btn-link" href="">Infraestura de Redes</a>
+                    <a class="btn btn-link" href="">Servidores</a>
+                    <a class="btn btn-link" href="">Máquinas e Equipamentos</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="https://www.borgonove.tech">borgonove.tech</a>, @2024 -  Todos os Direitos Reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/index.html">Home</a>
+                            <!-- <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top pt-2"><i class="bi bi-chevron-double-up""></i> Topo</a>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/scripts/geral.js"></script>
+    <script src="/assets/scripts/buscaCep.js"></script>
+    
+</body>
+</html>

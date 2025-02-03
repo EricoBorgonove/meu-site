@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo/logob9-favcon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/styles/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/styles/geral.css" rel="stylesheet">
+    <title>Listas Javascript| borgonove.tech</title>
+</head>
+<body>
+    
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-blue">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="/index.html" class="navbar-brand">
+                    <img src="/assets/images/logo/logob9 branco.png" height="24px" alt="logo b9 tech">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link text-white-50">Portfólio</a>
+                        <a href="" class="nav-item nav-link text-white-50">Serviços</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Matérias</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Exercícios</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/listajs.html" class="dropdown-item">Javascript</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="/pages/lista-algoritmo.html" class="dropdown-item">Algoritmos</a>
+                                <a href="/pages/lista-sala.html" class="dropdown-item">Exercícios de Sala</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Utilidades</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/buscaCep.html" class="dropdown-item">Busca Cep</a>
+                                <a href="/pages/imc.html" class="dropdown-item">IMC</a>
+                                <a href="" class="dropdown-item">Sorteio Personalidades</a>
+                                <a href="" class="dropdown-item">Relógio de Prova</a>
+                                <a href="" class="dropdown-item">Timer de Prova</a>
+                            </div>
+                        </div>
+                        <a href="/pages/contact.html" class="nav-item nav-link text-white">Contato</a>
+                        <a href="/pages/me.html" class="nav-item nav-link text-white-50">Me</a>
+                        <a href="" class="nav-item nav-link text-white-50">Área de Membros</a>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <style>
+        .externo{
+            background-color: lightgray;
+        }
+        .interno{
+            background-color: #ffff;
+            border: 1px solid darkgray;
+            border-radius: 7px;
+        }
+    </style>
+    <!-- Hero Start -->
+    <div class="externo">
+
+    <div class="container-fluid pt-5 hero-header mb-2 bg-blue">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg align-self-center text-center text-lg-start mb-lg-5">
+                    <h2 class="display-4 text-white mb-4 animated slideInRight">
+                         <i class="bi bi-filetype-js display-1 text-white" >
+                                            </i> Listas de Exercícios Javascript</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <div class="container-lg py-5 wow fadeIn interno" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="row justify-content-center">
+               
+            <section>
+                <h2>Lista 1 - Básica</h2>
+
+                <ol>
+                    <li>Imprima "Hello World!" no console:
+                    <li>Crie uma variável e atribua a ela um número qualquer. Em seguida, multiplique esse número por 2
+                        e imprima o resultado no console:</li>
+                    <li>Crie um script que calcule a média de três números:</li>
+                    <li>Criar uma variável e atribuir um valor a ela:</li>
+                    <li>Criar uma variável e realizar uma operação matemática:</li>
+                    <li>Criar uma string e concatenar com outra:</li>
+                    <li>Criar uma variável e exibir seu tipo:</li>
+                    <li>Criar uma variável e exibir seu valor convertido para numero:</li>
+                    <li>Utilizar a função prompt para obter uma entrada do usuário:</li>
+                    <li>Utilizar a função confirm para obter uma confirmação do usuário:</li>
+                    <li>Converter Temperatura de Fahrenheit (F) para Celsius (C) - C=5/9*(F-32)</li>
+                    <li>Faça um algoritmo que some dois números:</li>
+                    <li>Faça um algoritmo que subtraia dois números:</li>
+                    <li>Faça um algoritmo que multiplique dois números:</li>
+                    <li>Faça um algoritmo que dívida dois números:</li>
+                    <li>Faça um algoritmo que leia dois números e os multiplique:</li>
+                    <li>Faça um algoritmo que leia dois números e os dívida;</li>
+                    <li>Elaborar um algoritmo que calcule a área de um quadrado e de o resultado:</li>
+                    <li>Elaborar um algoritmo que entre com 4 notas de um aluno e de a média:</li>
+                    <li>Leia 5 números:
+                        <ol type="a">
+                            <li>Efetuar a adição do primeiro com o terceiro:</li>
+                            <li>Efetuar a subtração do segundo com o quarto;</li>
+                            <li>Efetuar a multiplicação entre todos:</li>
+                            <li>Efetuar a divisão do quinto com o primeiro:</li>
+                            <li>Apresente os resultados</li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 2 - Intermediária - Básica</h2>
+                <ol>
+                    <li> Entrar com o dia e o mês de uma data e informar quantos dias se passaram desde o início do ano.
+                        Esqueça a questão dos anos bissextos e considere sempre que um mês possui 30 dias.</li>
+                    <li>A lanchonete Gostosura vende apenas um tipo de sanduíche, cujo recheio inclui duas fatias de
+                        queijo, uma
+                        fatia de presunto e uma rodela de hambúrguer. Sabendo que cada fatia de queijo ou presunto pesa
+                        50 gramas, e
+                        que a rodela de hambúrguer pesa 100 gramas, faça um algoritmo em que o dono forneça a quantidade
+                        de
+                        sanduíches a fazer, e a máquina informe as quantidades (em quilos) de queijo, presunto e carne
+                        necessários
+                        para compra.</li>
+                    <li>
+                        A fábrica de refrigerantes Meia-Cola vende seu produto em três formatos: lata de 350 ml, garrafa
+                        de 600
+                        ml e garrafa de 2 litros. Se um comerciante compra uma determinada quantidade de cada formato,
+                        faça um
+                        algoritmo para calcular quantos litros de refrigerante ele comprou.
+                    </li>
+                    <li>Desenvolva um programa que pergunte ao usuário quantos amigos ele convidou para uma festa. Peça
+                        a cada
+                        amigo para informar quantas latas de 350 ml e garrafas de 600 ml ele trouxe. Calcule e exiba a
+                        quantidade
+                        total de litros de refrigerante na festa.</li>
+                    <li>Faça um programa que entre com três números, faça a média aritmética e mostre o resultado.</li>
+                    <li>Faça um programa que entre com o nome e o salário de um funcionário e mostre seu novo salário,
+                        sabendo
+                        que o mesmo teve um aumento de 10%.</li>
+                    <li>Faça um programa para converter um certo valor em dólar para reais (ver cotação do dia).</li>
+                    <li>Faça um programa que leia um saldo e imprimir o saldo com reajuste de 1%.</li>
+                    <li>Faça um programa que leia o valor de um produto e imprimir o valor corrigido com o reajuste de
+                        33.33%.</li>
+                    <li>Faça um programa que leia o salário de um funcionário e o percentual de aumento, calcule e
+                        mostre o
+                        valor do aumento e o novo salário.</li>
+                    <li>Escreva um programa que apresente uma caixa de alerta para o usuário com uma informação
+                        qualquer.</li>
+                    <li>Escreva um algoritmo para ler um valor (do teclado) e escrever (na tela) o seu antecessor.</li>
+                    <li>Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever
+                        a área
+                        do retângulo.</li>
+                    <li>Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a
+                        idade dessa
+                        pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.</li>
+                    <li>Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos
+                        brancos,
+                        nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de
+                        eleitores.</li>
+                    <li>Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de
+                        reajuste.
+                        Calcular e escrever o valor do novo salário.</li>
+                    <li>O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do
+                        distribuidor e
+                        dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de
+                        28% e os
+                        impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e
+                        escrever o custo
+                        final ao consumidor.</li>
+                    <li>Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês,
+                        mais uma
+                        comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas.
+                        Escrever um
+                        algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário
+                        fixo e o
+                        valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor.</li>
+                    <li>Fazer um programa que pergunta um valor em metros e imprime o correspondente em decímetros,
+                        centímetros
+                        e milímetros.</li>
+                    <li>Fazer um programa que imprima a média aritmética dos números 8,9 e 7. A média dos números 4, 5 e
+                        6. A
+                        soma das duas médias. A média das médias.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 3 - Estruturas Condionais</h2>
+                <ol>
+                    <li>Crie um programa que verifique se um número é par ou ímpar.</li>
+                    <li>Escreva um programa que determine se um ano é bissexto ou não.</li>
+                    <li>Crie um programa que verifique se uma pessoa é maior de idade (idade >= 18).</li>
+                    <li>Escreva um programa que calcule o IMC (Índice de Massa Corporal) de uma pessoa e classifique se
+                        ela está abaixo, dentro ou acima do peso ideal.</li>
+                    <li>Faça um programa que determine se um número é positivo, negativo ou zero.</li>
+                    <li>Crie um programa que determine se um número é primo ou não.</li>
+                    <li>Escreva um programa que calcule o fatorial de um número.</li>
+                    <li>Faça um programa que determine se um ano informado pelo usuário é um ano bissexto ou não.</li>
+                    <li>Crie um programa que calcule a raiz quadrada de um número, mas somente se o número for positivo.
+                    </li>
+                    <li>Escreva um programa que determine se um triângulo é equilátero, isósceles ou escaleno, com base
+                        em seus lados.</li>
+                    <li>Faça um programa que verifique se um número é múltiplo de 3 e 5 ao mesmo tempo.</li>
+                    <li>Crie um programa que calcule o preço final de um produto com base em seu preço de custo e uma
+                        porcentagem de lucro.</li>
+                    <li>Escreva um programa que determine se uma pessoa tem acesso a um sistema com base em seu nome de
+                        usuário e senha.</li>
+                    <li>Faça um programa que verifique se um número é um quadrado perfeito.</li>
+                    <li>Crie um programa que determine se um número é um palíndromo.</li>
+                    <li>Escreva um programa que calcule o máximo divisor comum (MDC) de dois números.</li>
+                    <li>Faça um programa que ordene três números em ordem crescente.</li>
+                    <li>Crie um programa que determine se um número é divisível por 2 e 3 ao mesmo tempo.</li>
+                    <li>Escreva um programa que calcule a média de um conjunto de notas e determine se o aluno foi
+                        aprovado ou reprovado (média >= 7).</li>
+                    <li>Faça um programa que determine se uma palavra é um palíndromo.</li>
+                    <li>Crie um programa que determine se um número é um número de Armstrong.</li>
+                    <li>Escreva um programa que calcule a área de um triângulo com base em sua base e altura.</li>
+                    <li>Faça um programa que determine se um número é um número perfeito.</li>
+                    <li>Crie um programa que determine se uma pessoa pode votar com base em sua idade (idade >= 16).
+                    </li>
+                    <li>Escreva um programa que calcule o valor do desconto em uma compra com base no valor total e uma
+                        porcentagem de desconto.</li>
+                    <li>Faça um programa que determine se um número é um número feliz.</li>
+                    <li>Crie um programa que determine se um número é um número de Fibonacci.</li>
+                    <li>Escreva um programa que calcule o valor a ser pago em uma corrida de táxi com base na distância
+                        percorrida e na tarifa por quilômetro.</li>
+                    <li>Faça um programa que verifique se um número é um número primo de Mersenne.</li>
+                    <li>Escreva um programa que verifica se um número é positivo, negativo ou zero.</li>
+                    <li>Escreva um programa que verifica se um número é par ou ímpar.</li>
+                    <li>Escreva um programa que verifica se uma pessoa tem idade suficiente para votar (18 anos ou
+                        mais).</li>
+                    <li>Escreva um programa que verifica se uma pessoa pode dirigir (idade maior ou igual a 18 anos e
+                        habilitação válida).</li>
+                    <li>Escreva um programa que verifica se um número é divisível por 3 e 5.</li>
+                    <li>Escreva um programa que verifica se uma pessoa pode se aposentar (idade maior ou igual a 65 anos
+                        ou tempo de contribuição maior ou igual a 30 anos).</li>
+                    <li>Escreva um programa que verifica se uma pessoa pode obter um empréstimo (renda mensal maior ou
+                        igual a 1000 e não possui nenhuma dívida em aberto).</li>
+                    <li>Escreva um programa que verifica se uma pessoa é adolescente (idade entre 13 e 19 anos).</li>
+                    <li>Escreva um programa que verifica se um ano é bissexto (divisível por 4 e não divisível por 100
+                        ou divisível por 400).</li>
+                    <li>Escreva um programa que verifica se uma pessoa pode entrar em uma montanha-russa (altura maior
+                        ou igual a 1,5 metros e idade maior ou igual a 12 anos).</li>
+                    <li>Escreva um programa que verifica se um número é par e maior que 10.</li>
+                    <li>Escreva um programa que verifica se uma pessoa tem acesso à área VIP (nome na lista e idade
+                        maior ou igual a 21 anos).</li>
+                    <li>Escreva um programa que verifica se um número é um quadrado perfeito.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 4 - Estruturas de Repetição</h2>
+                <ol>
+                    <li>Conte de 1 a 10 e exiba os números no console.</li>
+                    <li>Conte de 10 a 1 e exiba os números no console.</li>
+                    <li>Exiba todos os números pares de 1 a 20.</li>
+                    <li>Exiba todos os números ímpares de 1 a 20.</li>
+                    <li>Some os números de 1 a 10 e exiba a soma final.</li>
+                    <li>Calcule a média dos números de 1 a 10.</li>
+                    <li>Exiba a tabuada do 5 (de 5x1 a 5x10).</li>
+                    <li>Exiba todos os números primos de 1 a 50.</li>
+                    <li>Gere uma sequência de números de 1 a 100, substituindo múltiplos de 3 por "Fizz" e múltiplos de
+                        5 por "Buzz".</li>
+                    <li>Encontre o maior número em um conjunto de números digitados pelo usuário.</li>
+                    <li>Calcule o fatorial de um número.</li>
+                    <li>Crie um contador regressivo de 10 a 1 e exiba os números no console.</li>
+                    <li>Gere uma sequência de números pares de 2 a 20 e exiba-os.</li>
+                    <li>Gere uma sequência de números ímpares de 3 a 27 e exiba-os.</li>
+                    <li>Conte de 1 a 20 e exiba apenas os números divisíveis por 3 no console.</li>
+                    <li>Conte de 1 a 50 e exiba "Par" para números pares e "Ímpar" para números ímpares no console.</li>
+                    <li>Conte de 10 a 100 e exiba "Divisível por 7" para números divisíveis por 7 e "Não divisível por
+                        7" para os outros números no console.</li>
+                    <li>Crie um loop que exiba os números de 1 a 30, mas substitua os números divisíveis por 4 por
+                        "Quatro" no console.</li>
+                    <li>Conte de 1 a 20 e exiba "Par" para números pares e "Ímpar" para números ímpares, mas exclua o
+                        número 13 da contagem no console.</li>
+                    <li>Gere uma sequência de números de 1 a 50 e exiba "Primo" para números primos e "Não Primo" para
+                        os outros números no console.</li>
+                    <li>Conte de 100 a 1, exibindo apenas os números que são múltiplos de 6 ou 7 no console.</li>
+                    <li>Gere uma sequência de números de 1 a 50 e exiba "Ímpar" para números ímpares maiores que 25 e
+                        "Par" para os outros no console.</li>
+                    <li>Conte de 1 a 100 e exiba "Múltiplo de 3" para números divisíveis por 3, "Múltiplo de 5" para
+                        números divisíveis por 5 e "Múltiplo de 3 e 5" para números divisíveis por ambos no console.
+                    </li>
+                    <li>Gere uma sequência de números de 1 a 50, mas exclua os números que são múltiplos de 4 e 7 no
+                        console.</li>
+                    <li>Conte de 1 a 20 e exiba "Fizz" para números divisíveis por 3, "Buzz" para números divisíveis por
+                        5 e "FizzBuzz" para números divisíveis por ambos, mas exclua o número 15 da contagem no console.
+                    </li>
+                    <li>Crie um loop que exiba os números de 1 a 30, substituindo os números divisíveis por 3 por "Três"
+                        e os números divisíveis por 5 por "Cinco", mas exclua o número 23 da contagem no console.</li>
+                    <li>Conte de 1 a 50 e exiba "Primo" para números primos, "Múltiplo de 3" para números divisíveis por
+                        3 e "Múltiplo de 5" para números divisíveis por 5, mas exclua o número 15 da contagem no
+                        console.</li>
+                    <li>Gere uma sequência de números de 1 a 50, exibindo "Par" para números pares e "Ímpar" para
+                        números ímpares, mas exclua os números divisíveis por 4 do console.</li>
+                    <li>Um determinado clube de futebol pretende classificar seus atletas em categorias e para isto ele
+                        contratou um programador para criar um programa que executasse esta tarefa. Para isso o clube
+                        criou uma tabela que continha a faixa etária do atleta e sua categoria, sua tarefa é criar um
+                        script que leia 20 atletas e informe as categorias que eles se encontram:</li>
+                    <li>Faça um algoritmo que escreva na tela os números de um número inicial a um número final. Os
+                        números inicial e final devem ser informados pelo usuário.</li>
+                    <li>Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200.</li>
+                    <li>Escreva um algoritmo que diga classifique as pessoas,seguindo a tabela abaixo, o mesmo só deve
+                        parar quando classificar 10 pessoas:</li>
+                    <li>Escreva um algoritmo que calcule a média dos números digitados pelo usuário, se eles forem
+                        pares. Termine a leitura se o usuário digitar zero (0);</li>
+                    <li>Escreva um algoritmo que leia valores inteiros e encontre o maior e o menor deles. Termine a
+                        leitura se o usuário digitar zero (0);</li>
+                    <li>Escreva um programa que lido um número, calcule e informe o seu fatorial. Ex.: 5! = 5 * 4 * 3 *
+                        2 * 1 = 120.</li>
+                    <li>Escreva um programa que leia um valor correspondente ao número de jogadores de um time de vôlei.
+                        O programa deverá ler uma altura para cada um dos jogadores e, ao final, informar a altura média
+                        do time.</li>
+                    <li>Escrever um algoritmo que imprima a tabuada de um número informado pelo usuário;</li>
+                    <li>Em uma turma há 10 alunos. Cada aluno tem 2 notas. Um professor precisa calcular a média das
+                        duas notas de cada aluno. Crie um programa que resolve este problema.</li>
+                    <li>Escreva uma programa que lê o sexo de 20 pessoas. O sexo deverá ser com o tipo de dado caractere
+                        e o programa deverá aceitar apenas os valores “M” ou “F”.</li>
+                    <li>Escreva um programa que leia dois valores reais. Ambos valores deverão ser lidos até que o
+                        usuário digite um número no intervalo de 1 a 100. Apresentar a soma dos dois valores lidos.</li>
+                    <li>Desenvolver um algoritmo que efetue a soma de todos os números ímpares que são múltiplos de três
+                        e que se encontram no conjunto dos números de 1 até 500.</li>
+                    <li>Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a
+                        média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores
+                        negativos e o percentual de valores negativos e positivos.</li>
+                    <li>Faça um algoritmo que permita ao usuário informar a idade de quantas pessoas ele desejar. Após
+                        isso o algoritmo deve informar a soma das pessoas maiores de idade e a média de idade das
+                        pessoas maiores de idade informadas.</li>
+                    <li>Agora altere o algoritmo anterior, de maneira que ele imprima o percentual de pessoas
+                        considerando as faixas de idade: 0-17 anos, 18 a 35 anos, 35 a 50 anos, 50 a 65 anos e maiores
+                        de 65 anos. Lembrete: a soma dos percentuais das faixas deve totalizar 100%.</li>
+                    <li>A sequência de Fibonacci tem papel importante na explicação de fenômenos naturais. Ela é também
+                        bastante utilizada para fins estéticos, pela sua reconhecida harmonia. Exemplo disso foi sua
+                        utilização na construção do Partenon, em Atenas. A sequência dá-se inicialmente por dois números
+                        1. A partir do terceiro elemento usa-se a expressão: elemento(n) = elemento(n-1) +
+                        elemento(n-2). Exemplo de sequência: 1, 1, 2, 3, 5, 8. Construa um algoritmo que imprima na tela
+                        os n primeiros elementos da sequência de Fibonacci, onde n é informado pelo usuário.</li>
+                    <li>Crie um loop que gere a sequência de números de Fibonacci até o 50º termo. Exiba apenas os
+                        números que são divisíveis por 7.</li>
+                    <li>Conte de 1 a 1000 e exiba apenas os números que são palíndromos. Um número palíndromo é aquele
+                        que permanece o mesmo quando lido de trás para frente (por exemplo, 121, 1331).</li>
+                    <li>Implemente um loop que simule o jogo "FizzBuzz" para números de 1 a 3000. No entanto, em vez de
+                        usar "Fizz" e "Buzz," use palavras diferentes, como "Par" para números pares, "Mono 3" para
+                        múltiplos de 3, "Mono 5" para múltiplos de 5. Para números que são múltiplos de 3 e 5 ao mesmo
+                        tempo, exiba "Duo 3 e 5.", Já para números que atendam aos 3 requisitos exiba "Trio". Se o
+                        número for par e multiplo de algum dos números, exiba "Mono X e Par", e no final indique quantos
+                        números atendereram cada requisito e some todos eles.</li>
+                    <li>Crie um loop que gere números primos até 10000 e exiba o 1000º número primo encontrado e a soma
+                        de todos eles.</li>
+                    <li>Implemente um algoritmo de busca binária dentro de um loop "for" que encontre a posição de um
+                        número específico em uma sequência ordenada de números de 1 a 10000. Exiba a posição do número
+                        na sequência.</li>
+                    <li>Escreva um programa que exiba todos os números de 1 a 1000 que são divisíveis por 7.</li>
+                    <li>Crie um programa que calcule a soma de todos os números pares de 1 a 100.</li>
+                    <li>Exiba os primeiros 50 números da sequência de Fibonacci.</li>
+                    <li>Calcule a média de 10 números digitados pelo usuário.</li>
+                    <li>Escreva um programa que encontre o menor valor em um conjunto de 100 números digitados pelo
+                        usuário.</li>
+                    <li>Crie um programa que gere a tabuada de multiplicação de 1 a 10 para um número digitado pelo
+                        usuário.</li>
+                    <li>Exiba todos os números primos de 1 a 100.</li>
+                    <li>Calcule a soma de todos os números ímpares de 1 a 100.</li>
+                    <li>Escreva um programa que exiba os múltiplos de 3 de 1 a 100.</li>
+                    <li>Encontre o segundo maior valor em um conjunto de 50 números digitados pelo usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 5 em 5.</li>
+                    <li>Escreva um programa que calcule o produto de todos os números de 1 a 10.</li>
+                    <li>Exiba os números de 1 a 100 em ordem reversa.</li>
+                    <li>Crie um programa que conte quantas vezes um determinado número digitado pelo usuário aparece em
+                        um conjunto de 100 números.</li>
+                    <li>Calcule a soma dos quadrados de todos os números de 1 a 10.</li>
+                    <li>Exiba a sequência de números pares de 2 a 100.</li>
+                    <li>Escreva um programa que calcule a média de idade de 20 pessoas.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 3 ou 5.</li>
+                    <li>Calcule o fatorial de um número digitado pelo usuário.</li>
+                    <li>Escreva um programa que determine se um número digitado pelo usuário é primo ou não.</li>
+                    <li>Exiba os números de 1 a 100 que não são divisíveis por 2, 3 ou 5.</li>
+                    <li>Calcule a soma de todos os números ímpares de 1 a 1000.</li>
+                    <li>Escreva um programa que encontre o maior valor em um conjunto de 50 números digitados pelo
+                        usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 10 em 10.</li>
+                    <li>Crie um programa que conte quantos números pares e ímpares existem em um conjunto de 100 números
+                        digitados pelo usuário.</li>
+                    <li>Calcule a média de altura de 30 pessoas.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 4 e 7.</li>
+                    <li>Escreva um programa que determine se um número digitado pelo usuário é positivo, negativo ou
+                        zero.</li>
+                    <li>Calcule a soma dos cubos de todos os números de 1 a 10.</li>
+                    <li>Exiba a sequência de números ímpares de 1 a 100.</li>
+                    <li>Crie um programa que verifique se um número digitado pelo usuário é palíndromo.</li>
+                    <li>Escreva um programa que calcule a média ponderada de 10 notas, considerando seus respectivos
+                        pesos.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 6 ou 9.</li>
+                    <li>Calcule o número de dígitos de um número inteiro digitado pelo usuário.</li>
+                    <li>Escreva um programa que determine se um ano digitado pelo usuário é bissexto.</li>
+                    <li>Crie um programa que exiba os números primos de 1 a 100 em ordem decrescente.</li>
+                    <li>Calcule a soma de todos os múltiplos de 4 de 1 a 100.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 7 em 7.</li>
+                    <li>Escreva um programa que calcule o máximo divisor comum (MDC) de dois números digitados pelo
+                        usuário.</li>
+                    <li>Verifique se um número digitado pelo usuário é um número perfeito.</li>
+                    <li>Crie um programa que exiba a sequência de números de 1 a 100 de trás para frente.</li>
+                    <li>Calcule a soma de todos os números primos de 1 a 1000.</li>
+                    <li>Escreva um programa que encontre o terceiro maior valor em um conjunto de 100 números digitados
+                        pelo usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100 que são quadrados perfeitos.</li>
+                    <li>Calcule o somatório de uma série infinita até que a diferença entre dois termos consecutivos
+                        seja menor que 0,001.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 5 - Estruturas de Repetição - Intermediário</h2>
+                <ol>
+                    <li>Escreva um algoritmo que exiba 20 vezes a mensagem “Eu gosto de estudar Algoritmos!”</li>
+                    <li>Escreva um algoritmo que calcule a soma dos números de 1 a 15.</li>
+                    <li>Leia o nome do usuário e escreva o nome dele na tela 10 vezes.</li>
+                    <li>Leia o nome um número do usuário um número N e escreva o nome dele na tela N vezes.</li>
+                    <li>Escreva um algoritmo que leia 10 números do usuário e calcule a soma desses números.</li>
+                    <li>Leia a idade de 20 pessoas e exiba a soma das idades.</li>
+                    <li>Leia a idade de 20 pessoas e exiba a média das idades.</li>
+                    <li>Leia a idade de 20 pessoas e exiba quantas pessoas são maiores de idade.</li>
+                    <li>Leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.</li>
+                    <li>Crie um algoritmo leia um número do usuário e exiba a sua tabuada de multiplicação.</li>
+                    <li>Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são maiores do que
+                        8.</li>
+                    <li>Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são pares.</li>
+                    <li>Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100.</li>
+                    <li>Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos
+                        estão entre 101 e 200 e quantos são maiores de 200.</li>
+                    <li>Escreva um algoritmo que leia uma sequência de números do usuário e realize a soma desses
+                        números. Encerre a execução quando um número negativo for digitado.</li>
+                    <li>Escreva um algoritmo para ler 2 valores e se o segundo valor informado for ZERO, deve ser lido
+                        um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o
+                        resultado da divisão do primeiro valor lido pelo segundo valor lido. (utilizar a estrutura
+                        WHILE).</li>
+                    <li>Reescreva o exercício anterior utilizando a estrutura DO WHILE.</li>
+                    <li>Acrescentar uma mensagem de 'VALOR INVÁLIDO' no exercício 16 caso o segundo valor informado seja
+                        ZERO.</li>
+                    <li>Acrescentar uma mensagem de 'VALOR INVÁLIDO' no exercício 17 caso o segundo valor informado seja
+                        ZERO.</li>
+                    <li>Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem
+                        crescente.</li>
+                    <li>Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem
+                        decrescente.</li>
+                    <li>Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.</li>
+                    <li>Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive).
+                        Considere que o N será sempre maior que ZERO.</li>
+                    <li>Modifique o exercício anterior para aceitar somente valores maiores que 0 para N. Caso o valor
+                        informado (para N) não seja maior que 0, deverá ser lido um novo valor para N.</li>
+                    <li>Escreva um algoritmo que calcule e imprima a tabuada do 8 (1 a 10).</li>
+                    <li>Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrever a tabuada de 1 a 10 do
+                        valor lido.</li>
+                    <li>Reescreva o exercício 22 utilizando a estrutura WHILE.</li>
+                    <li>Reescreva o exercício 22 utilizando um CONTADOR.</li>
+                    <li>Reescreva o exercício 23 utilizando um CONTADOR.</li>
+                    <li>Reescreva o exercício 23 utilizando a estrutura WHILE e um CONTADOR.</li>
+                    <li>Ler 10 valores e escrever quantos desses valores lidos são NEGATIVOS.</li>
+                    <li>Ler 10 valores e escrever quantos desses valores lidos estão no intervalo [10,20] (inlcuindo os
+                        valores 10 e 20 no intervalo) e quantos deles estão fora deste intervalo.</li>
+                    <li>Ler 10 valores, calcular e escrever a média aritmética desses valores lidos.</li>
+                    <li>Ler o número de alunos existentes em uma turma e, após isto, ler as notas destes alunos,
+                        calcular e escrever a média aritmética dessas notas lidas.</li>
+                    <li>Escreva um algoritmo para ler 10 números e ao final da leitura escrever a soma total dos 10
+                        números lidos.</li>
+                    <li>Escreva um algoritmo para ler 10 números. Todos os números lidos com valor inferior a 40 devem
+                        ser somados. Escreva o valor final da soma efetuada.</li>
+                    <li>Ler 2 valores, calcular e escrever a soma dos inteiros existentes entre os 2 valores lidos
+                        (incluindo os valores lidos na soma). Considere que o segundo valor lido será sempre maior que o
+                        primeiro valor lido.</li>
+                    <li>O mesmo exercício anterior, mas agora, considere que o segundo valor lido poderá ser maior ou
+                        menor que o primeiro valor lido, ou seja, deve-se testá-los.</li>
+                    <li>Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15
+                        (inclusive) e 100 (inclusive).</li>
+                    <li>Uma loja está levantando o valor total de todas as mercadorias em estoque. Escreva um algoritmo
+                        que permita a entrada das seguintes informações: a) o número total de mercadorias no estoque; b)
+                        o valor de cada mercadoria. c) Ao final imprimir o valor total em estoque e a média de valor das
+                        mercadorias.</li>
+                    <li>O mesmo exercício anterior, mas agora não será informado o número de mercadorias em estoque.
+                        Então o funcionamento deverá ser da seguinte forma: ler o valor da mercadoria e perguntar ‘MAIS
+                        MERCADORIAS (S/N)?’. Ao final, imprimir o valor total em estoque e a média de valor das
+                        mercadorias em estoque.</li>
+                    <li>Faça um programa que leia 100 valores e no final, escreva o maior e o menor valor lido.</li>
+                    <li>Faça um algoritmo para ler uma quantidade e a seguir ler esta quantidade de números. Depois de
+                        ler todos os números o algoritmo deve apresentar na tela o maior dos números lidos e a média dos
+                        números lidos.</li>
+                    <li>Faça um algoritmo para ler o código e o preço de 15 produtos, calcular e escrever: a) O maior
+                        preço lido; b) O menor preço lido; c) A média aritmética dos preços dos produtos</li>
+                    <li>A prefeitura de uma cidade deseja fazer uma pesquisa entre seus habitantes. Faça um algoritmo
+                        para coletar dados sobre o salário e número de filhos de cada habitante e após as leituras,
+                        escrever: a) Média de salário da população b) Média do número de filhos c) Maior salário dos
+                        habitantes d) Percentual de pessoas com salário menor que R$ 150,00 Obs.: O final da leituras
+                        dos dados se dará com a entrada de um “salário negativo”.</li>
+                    <li>Escreva um algoritmo que imprima a tabuada (de 1 a 10) para os números de 1 a 10.</li>
+                    <li>Escreva um algoritmo que imprima as seguintes sequências de números: (1, 1 2 3 4 5 6 7 8 9 10)
+                        (2, 1 2 3 4 5 6 7 8 9 10) (3, 1 2 3 4 5 6 7 8 9 10) (4, 1 2 3 4 5 6 7 8 9 10) e assim
+                        sucessivamente, até que o primeiro número (antes da vírgula), também chegue a 10.</li>
+                    <li>Escreva um programa que calcule a soma de todos os números pares de 1 a 100.</li>
+                    <li>Faça um algoritmo que leia um número inteiro N e exiba os N primeiros números da sequência de
+                        Fibonacci.</li>
+                    <li>Calcule a média de idade de um grupo de 30 pessoas.</li>
+                    <li>Leia uma sequência de números inteiros e exiba o maior número da sequência.</li>
+                    <li>Leia uma sequência de números inteiros e exiba o menor número da sequência.</li>
+                    <li>Escreva um programa que calcule o fatorial de um número inteiro.</li>
+                    <li>Leia uma sequência de números inteiros e exiba a soma de todos os números ímpares da sequência.
+                    </li>
+                    <li>Leia uma sequência de números inteiros e exiba a soma de todos os números pares da sequência.
+                    </li>
+                    <li>Escreva um programa que exiba a tabuada de multiplicação de um número N.</li>
+                    <li>Leia uma sequência de números inteiros e conte quantos números são maiores que 50.</li>
+                    <li>Leia uma sequência de números inteiros e conte quantos números são menores que 10.</li>
+                    <li>Escreva um programa que gere a sequência de números primos de 1 a 100.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são múltiplos de 3.</li>
+                    <li>Escreva um programa que calcule a média de altura de um grupo de 20 pessoas.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são múltiplos de 5.</li>
+                    <li>Escreva um programa que leia uma sequência de números inteiros e exiba o segundo maior número da
+                        sequência.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são primos.</li>
+                    <li>Escreva um programa que leia uma sequência de números inteiros e exiba quantos números são
+                        palíndromos (lidos da mesma forma da esquerda para a direita e vice-versa).</li>
+                    <li>Leia uma sequência de números inteiros e exiba a média dos números múltiplos de 4.</li>
+                    <li>Escreva um programa que calcule o produto de todos os números pares de 1 a 20.</li>
+                    <li>Leia uma sequência de números inteiros e exiba a média dos números que estão na posição par da
+                        sequência.</li>
+                    <li>Escreva um programa que leia uma sequência de números inteiros e exiba a soma dos dígitos de
+                        cada número.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são divisíveis por 7.</li>
+                    <li>Escreva um programa que leia uma sequência de números inteiros e exiba quantos números são
+                        múltiplos de 3 e 5 ao mesmo tempo.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são maiores que a média da
+                        sequência.</li>
+                    <li>Escreva um programa que calcule a soma dos números de 1 a 100.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são iguais ao primeiro número da
+                        sequência.</li>
+                    <li>Escreva um programa que gere a sequência de números ímpares de 1 a 99.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são divisíveis por 2 e 3 ao mesmo
+                        tempo.</li>
+                    <li>Escreva um programa que calcule o quadrado de todos os números de 1 a 10.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são maiores que o número anterior
+                        da sequência.</li>
+                    <li>Escreva um programa que gere a sequência de números de 1 a 50, substituindo os múltiplos de 4
+                        por "Quatro" e os múltiplos de 7 por "Sete".</li>
+                    <li>Leia uma sequência de números inteiros e exiba a média dos números que estão nas posições
+                        ímpares da sequência.</li>
+                    <li>Escreva um programa que calcule o produto dos números de 1 a 10.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são iguais ao último número da
+                        sequência.</li>
+                    <li>Escreva um programa que gere a sequência de números pares de 2 a 100.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são divisíveis por 2 e 5 ao mesmo
+                        tempo.</li>
+                    <li>Escreva um programa que calcule a soma dos dígitos de um número inteiro.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são divisíveis por 3 e 7 ao mesmo
+                        tempo.</li>
+                    <li>Escreva um programa que gere a sequência de números de 1 a 50, substituindo os números
+                        divisíveis por 3 por "Três" e os números divisíveis por 5 por "Cinco".</li>
+                    <li>Leia uma sequência de números inteiros e exiba a média dos números que estão na posição par da
+                        sequência.</li>
+                    <li>Escreva um programa que calcule o produto dos números de 1 a 5.</li>
+                    <li>Leia uma sequência de números inteiros e exiba quantos números são divisíveis por 2, 3 e 5 ao
+                        mesmo tempo.</li>
+                    <li>Escreva um programa que gere a sequência de números de 1 a 50, substituindo os números
+                        divisíveis por 4 e 7 por "QuatroSete".</li>
+                    <li>Leia uma sequência de números inteiros e exiba a média dos números que estão nas posições
+                        ímpares da sequência.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 6 - Estruturas Multiplas - Diversos</h2>
+                <ol>
+                    <li>Escreva um programa que exiba todos os números de 1 a 1000 que são divisíveis por 7.</li>
+                    <li>Crie um programa que calcule a soma de todos os números pares de 1 a 100.</li>
+                    <li>Exiba os primeiros 50 números da sequência de Fibonacci.</li>
+                    <li>Calcule a média de 10 números digitados pelo usuário.</li>
+                    <li>Escreva um programa que encontre o menor valor em um conjunto de 100 números digitados pelo
+                        usuário.</li>
+                    <li>Crie um programa que gere a tabuada de multiplicação de 1 a 10 para um número digitado pelo
+                        usuário.</li>
+                    <li>Exiba todos os números primos de 1 a 100.</li>
+                    <li>Calcule a soma de todos os números ímpares de 1 a 100.</li>
+                    <li>Escreva um programa que exiba os múltiplos de 3 de 1 a 100.</li>
+                    <li>Encontre o segundo maior valor em um conjunto de 50 números digitados pelo usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 5 em 5.</li>
+                    <li>Escreva um programa que calcule o produto de todos os números de 1 a 10.</li>
+                    <li>Exiba os números de 1 a 100 em ordem reversa.</li>
+                    <li>Crie um programa que conte quantas vezes um determinado número digitado pelo usuário aparece em
+                        um conjunto de 100 números.</li>
+                    <li>Calcule a soma dos quadrados de todos os números de 1 a 10.</li>
+                    <li>Exiba a sequência de números pares de 2 a 100.</li>
+                    <li>Escreva um programa que calcule a média de idade de 20 pessoas.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 3 ou 5.</li>
+                    <li>Calcule o fatorial de um número digitado pelo usuário.</li>
+                    <li>Escreva um programa que determine se um número digitado pelo usuário é primo ou não.</li>
+                    <li>Exiba os números de 1 a 100 que não são divisíveis por 2, 3 ou 5.</li>
+                    <li>Calcule a soma de todos os números ímpares de 1 a 1000.</li>
+                    <li>Escreva um programa que encontre o maior valor em um conjunto de 50 números digitados pelo
+                        usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 10 em 10.</li>
+                    <li>Crie um programa que conte quantos números pares e ímpares existem em um conjunto de 100 números
+                        digitados pelo usuário.</li>
+                    <li>Calcule a média de altura de 30 pessoas.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 4 e 7.</li>
+                    <li>Escreva um programa que determine se um número digitado pelo usuário é positivo, negativo ou
+                        zero.</li>
+                    <li>Calcule a soma dos cubos de todos os números de 1 a 10.</li>
+                    <li>Exiba a sequência de números ímpares de 1 a 100.</li>
+                    <li>Crie um programa que verifique se um número digitado pelo usuário é palíndromo.</li>
+                    <li>Escreva um programa que calcule a média ponderada de 10 notas, considerando seus respectivos
+                        pesos.</li>
+                    <li>Exiba os números de 1 a 100 que são divisíveis por 6 ou 9.</li>
+                    <li>Calcule o número de dígitos de um número inteiro digitado pelo usuário.</li>
+                    <li>Escreva um programa que determine se um ano digitado pelo usuário é bissexto.</li>
+                    <li>Crie um programa que exiba os números primos de 1 a 100 em ordem decrescente.</li>
+                    <li>Calcule a soma de todos os múltiplos de 4 de 1 a 100.</li>
+                    <li>Exiba a sequência de números de 1 a 100, pulando de 7 em 7.</li>
+                    <li>Escreva um programa que calcule o máximo divisor comum (MDC) de dois números digitados pelo
+                        usuário.</li>
+                    <li>Verifique se um número digitado pelo usuário é um número perfeito.</li>
+                    <li>Crie um programa que exiba a sequência de números de 1 a 100 de trás para frente.</li>
+                    <li>Calcule a soma de todos os números primos de 1 a 1000.</li>
+                    <li>Escreva um programa que encontre o terceiro maior valor em um conjunto de 100 números digitados
+                        pelo usuário.</li>
+                    <li>Exiba a sequência de números de 1 a 100 que são quadrados perfeitos.</li>
+                    <li>Calcule o somatório de uma série infinita até que a diferença entre dois termos consecutivos
+                        seja menor que 0,001.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 7 - Funções Simples</h2>
+                <ol>
+                    <li>Crie uma função que retorne a soma de dois números.</li>
+                    <li>Crie uma função que retorne o produto de dois números.</li>
+                    <li>Crie uma função que retorne o quadrado de um número.</li>
+                    <li>Crie uma função que retorne o comprimento de uma string.</li>
+                    <li>Crie uma função que retorne a primeira letra de uma string.</li>
+                    <li>Crie uma função que retorne a última letra de uma string.</li>
+                    <li>Crie uma função que receba dois números e retorne o maior deles.</li>
+                    <li>Crie uma função que receba uma string e a converta para letras maiúsculas.</li>
+                    <li>Crie uma função que receba uma string e a converta para letras minúsculas.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for par e falso se for ímpar.
+                    </li>
+                    <li>Crie uma função que receba uma lista de números e retorne a soma de todos eles.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o maior número.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o menor número.</li>
+                    <li>Crie uma função que receba um número e retorne o seu dobro.</li>
+                    <li>Crie uma função que receba dois números e retorne o resultado da multiplicação do primeiro pelo
+                        segundo.</li>
+                    <li>Crie uma função que receba um número e retorne o seu valor absoluto.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for positivo e falso se for
+                        negativo ou zero.</li>
+                    <li>Crie uma função que retorne a mensagem "Olá, mundo!" quando chamada.</li>
+                    <li>Crie uma função que receba dois números e retorne a diferença entre eles.</li>
+                    <li>Crie uma função que receba um número e retorne o próximo número inteiro.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 8 - Funções Intermediário</h2>
+                <ol>
+                    <li>Crie uma função que receba uma string e retorne o número de vogais presentes nela.</li>
+                    <li>Crie uma função que retorne a data atual.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for um número primo e falso
+                        caso contrário.</li>
+                    <li>Crie uma função que receba duas strings e concatene-as em uma única string.</li>
+                    <li>Crie uma função que receba uma string e retorne o número de caracteres nela.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for maior que 10 e falso caso
+                        contrário.</li>
+                    <li>Crie uma função que receba dois números e retorne o resultado da soma deles.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne a soma deles.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne o seu quadrado.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne o seu valor absoluto.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne o maior deles.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne o menor deles.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for par e falso
+                        se for ímpar.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for positivo e
+                        falso se for negativo ou zero.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne o resultado da multiplicação
+                        entre eles.</li>
+                    <li>Crie uma função que receba três números como argumentos e retorne a média deles.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne o número seguinte.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne o número anterior.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne o resultado da divisão entre
+                        eles.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne o resto da divisão entre eles.
+                    </li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for um número
+                        primo e falso caso contrário.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne a sequência de Fibonacci até esse
+                        número.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne o fatorial desse número.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for um número
+                        perfeito e falso caso contrário.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne a raiz quadrada desse número.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne o número de caracteres nela.</li>
+                    <li>Crie uma função que receba duas strings como argumentos e retorne uma única string concatenando
+                        as duas.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne a string invertida.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne a string em maiúsculas.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne a string em minúsculas.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne verdadeiro se ela for um
+                        palíndromo (lida da mesma forma de trás para frente) e falso caso contrário.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne verdadeiro se eles forem
+                        iguais e falso caso contrário.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for um número
+                        inteiro e falso caso contrário.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for um número
+                        decimal e falso caso contrário.</li>
+                    <li>Crie uma função que receba dois números como argumentos e retorne verdadeiro se o primeiro for
+                        divisível pelo segundo e falso caso contrário.</li>
+                    <li>Crie uma função que receba uma string como argumento e retorne o número de palavras nela.</li>
+                    <li>Crie uma função que receba um número como argumento e retorne verdadeiro se ele for um número
+                        par positivo e falso caso contrário.</li>
+                    <li>Crie uma função que receba uma string e retorne o número de vogais presentes nela.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for um número primo e falso
+                        caso contrário.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for um número perfeito e falso
+                        caso contrário. (Um número perfeito é aquele cuja soma de seus divisores próprios é igual a ele
+                        mesmo, por exemplo, 28 é um número perfeito porque 1 + 2 + 4 + 7 + 14 = 28).</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 9 - Arrays</h2>
+                <ol>
+                    <li>Crie um array vazio.</li>
+                    <li>Crie um array com números inteiros.</li>
+                    <li>Acesse o primeiro elemento de um array.</li>
+                    <li>Acesse o último elemento de um array.</li>
+                    <li>Adicione um elemento ao final de um array.</li>
+                    <li>Remova o último elemento de um array.</li>
+                    <li>Adicione um elemento ao início de um array.</li>
+                    <li>Remova o primeiro elemento de um array.</li>
+                    <li>Verifique o tamanho de um array.</li>
+                    <li>Verifique se um elemento existe em um array.</li>
+                    <li>Encontre a posição de um elemento em um array.</li>
+                    <li>Crie uma cópia de um array.</li>
+                    <li>Inverta a ordem dos elementos em um array.</li>
+                    <li>Ordene os elementos de um array em ordem crescente.</li>
+                    <li>Ordene os elementos de um array em ordem decrescente.</li>
+                    <li>Adicione vários elementos a um array de uma só vez.</li>
+                    <li>Remova elementos de um array com base em uma condição.</li>
+                    <li>Extraia uma parte de um array (subarray).</li>
+                    <li>Junte (concatene) dois arrays em um só.</li>
+                    <li>Divida um array em vários subarrays menores.</li>
+                    <li>Crie um novo array com os elementos únicos de um array original.</li>
+                    <li>Conte quantas vezes um elemento aparece em um array.</li>
+                    <li>Calcule a soma de todos os elementos em um array de números.</li>
+                    <li>Calcule a média dos elementos em um array de números.</li>
+                    <li>Encontre o maior número em um array de números.</li>
+                    <li>Encontre o menor número em um array de números.</li>
+                    <li>Some todos os números pares em um array de números.</li>
+                    <li>Filtre apenas os números ímpares em um array de números.</li>
+                    <li>Crie um array de objetos com propriedades (chave-valor).</li>
+                    <li>Encontre o objeto com a propriedade de valor máximo em um array de objetos.</li>
+                    <li>Encontre o objeto com a propriedade de valor mínimo em um array de objetos.</li>
+                    <li>Ordene um array de objetos com base em uma propriedade específica.</li>
+                    <li>Filtre objetos com base em uma condição em uma propriedade específica.</li>
+                    <li>Crie um array de strings.</li>
+                    <li>Ordene as strings em ordem alfabética.</li>
+                    <li>Encontre a string mais longa em um array de strings.</li>
+                    <li>Concatene todas as strings em um único texto.</li>
+                    <li>Verifique se todas as strings em um array têm um determinado comprimento.</li>
+                    <li>Encontre todas as strings que contêm uma substring específica.</li>
+                    <li>Crie um array de datas.</li>
+                    <li>Encontre a data mais antiga em um array de datas.</li>
+                    <li>Encontre a data mais recente em um array de datas.</li>
+                    <li>Ordene um array de datas em ordem crescente.</li>
+                    <li>Ordene um array de datas em ordem decrescente.</li>
+                    <li>Filtre datas em um intervalo específico.</li>
+                    <li>Encontre o dia da semana mais frequente em um array de datas.</li>
+                    <li>Verifique se todas as datas em um array estão em um determinado ano.</li>
+                    <li>Crie um array de números e multiplique todos os elementos por um valor específico.</li>
+                    <li>Encontre o produto (multiplicação) de todos os elementos em um array de números.</li>
+                    <li>Verifique se um array de números está em ordem crescente.</li>
+                    <li>Verifique se um array de números está em ordem decrescente.</li>
+                    <li>Crie um array com elementos de diferentes tipos de dados.</li>
+                    <li>Encontre o número mais frequente em um array de números.</li>
+                    <li>Encontre o número menos frequente em um array de números.</li>
+                    <li>Remova elementos duplicados de um array.</li>
+                    <li>Divida um array em grupos de tamanho específico.</li>
+                    <li>Crie um programa que encontre o maior número em um array usando um loop `for`.</li>
+                    <li>Encontre o menor número em um array usando um loop `for`.</li>
+                    <li>Some todos os números em um array usando um loop `for`.</li>
+                    <li>Multiplique todos os números em um array usando um loop `for`.</li>
+                    <li>Calcule a média dos números em um array usando um loop `for`.</li>
+                    <li>Conte quantos números pares existem em um array usando um loop `for`.</li>
+                    <li>Conte quantos números ímpares existem em um array usando um loop `for`.</li>
+                    <li>Verifique se todos os elementos em um array são positivos usando um loop `for`.</li>
+                    <li>Verifique se pelo menos um elemento em um array é negativo usando um loop `for`.</li>
+                    <li>Inverta a ordem dos elementos em um array usando um loop `for`.</li>
+                    <li>Ordene os elementos de um array em ordem crescente usando um algoritmo de seleção.</li>
+                    <li>Ordene os elementos de um array em ordem decrescente usando um algoritmo de seleção.</li>
+                    <li>Ordene os elementos de um array em ordem crescente usando um algoritmo de inserção.</li>
+                    <li>Ordene os elementos de um array em ordem decrescente usando um algoritmo de inserção.</li>
+                    <li>Verifique se um array está vazio usando um loop `for`.</li>
+                    <li>Verifique se um array contém apenas elementos únicos, ou seja, nenhum elemento se repete.</li>
+                    <li>Crie um novo array que seja uma cópia reversa do array original.</li>
+                    <li>Encontre a moda (elemento mais frequente) em um array usando um loop `for`.</li>
+                    <li>Encontre a mediana (elemento central) em um array de números ímpares.</li>
+                    <li>Encontre a mediana em um array de números pares.</li>
+                    <li>Remova todos os elementos duplicados de um array usando um loop `for`.</li>
+                    <li>Encontre o segundo maior número em um array usando um loop `for`.</li>
+                    <li>Encontre o segundo menor número em um array usando um loop `for`.</li>
+                    <li>Verifique se um array é um palíndromo, ou seja, pode ser lido da mesma forma de trás para frente.</li>
+                    <li>Verifique se um array está ordenado em ordem crescente usando um loop `for`.</li>
+                    <li>Verifique se um array está ordenado em ordem decrescente usando um loop `for`.</li>
+                    <li>Encontre a posição (índice) do primeiro número negativo em um array.</li>
+                    <li>Encontre a posição (índice) do último número negativo em um array.</li>
+                    <li>Encontre a posição (índice) de um número específico em um array.</li>
+                    <li>Verifique se um array contém um número primo usando um loop `for`.</li>
+                    <li>Encontre o fatorial de cada número em um array e crie um novo array com os resultados.</li>
+                    <li>Verifique se um array é simétrico, ou seja, a ordem dos elementos é a mesma da esquerda para a direita e da direita para a esquerda.</li>
+                    <li>Crie um programa que some os elementos de dois arrays e coloque o resultado em um terceiro array.</li>
+                    <li>Encontre o elemento que mais aparece em dois arrays.</li>
+                    <li>Encontre o elemento que menos aparece em dois arrays.</li>
+                    <li>Concatene dois arrays, removendo os elementos duplicados.</li>
+                    <li>Encontre a diferença entre dois arrays, ou seja, os elementos que estão em um e não no outro.</li>
+                    <li>Verifique se dois arrays têm elementos em comum.</li>
+                    <li>Encontre os elementos que aparecem em ambos os arrays.</li>
+                    <li>Encontre os elementos que aparecem em apenas um dos arrays.</li>
+                    <li>Crie um programa que remova todos os elementos de um array que não atendem a uma determinada condição.</li>
+                    <li>Crie um programa que some os elementos de um array até que a soma alcance um valor específico.</li>
+                    <li>Encontre a soma de todos os números primos em um array.</li>
+                    <li>Encontre o elemento que mais aparece em um array de strings.</li>
+                    <li>Encontre o elemento que menos aparece em um array de strings.</li>
+                    <li>Crie um programa que conte quantas palavras em um array de strings têm mais de X caracteres.</li>
+                    <li>Encontre a maior palavra em um array de strings.</li>
+                    <li>Encontre a menor palavra em um array de strings.</li>
+                    <li>Crie um programa que capitalize a primeira letra de cada palavra em um array de strings.</li>
+                    <li>Verifique se um array de strings contém apenas palavras palíndromas.</li>
+                  </ol>
+            </section>
+
+            <section>
+                <h2>Lista 10 - Funções com Arrays</h2>
+                <ol>
+                    <li>Crie uma função que receba uma lista de nomes e retorne uma lista com os nomes em ordem
+                        alfabética.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números pares.
+                    </li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números ímpares.
+                    </li>
+                    <li>Crie uma função que receba uma lista de números e um número alvo, e retorne uma nova lista com
+                        os números maiores que o número alvo.</li>
+                    <li>Crie uma função que receba uma lista de números e um número alvo, e retorne uma nova lista com
+                        os números menores que o número alvo.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números
+                        duplicados removidos.</li>
+                    <li>Crie uma função que receba uma lista de números e um número alvo, e retorne a posição (índice)
+                        do número alvo na lista.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números
+                        invertidos.</li>
+                    <li>Crie uma função que receba uma lista de palavras e retorne a primeira palavra.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o último número.</li>
+                    <li>Crie uma função que receba um número e retorne o quadrado dele.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne a soma de todos os números negativos.
+                    </li>
+                    <li>Crie uma função que receba uma lista de números e retorne a média deles.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o número mais repetido.</li>
+                    <li>Crie uma função que receba uma lista de nomes e retorne o nome mais longo.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o maior número ímpar.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o menor número par.</li>
+                    <li>Crie uma função que receba um número e retorne verdadeiro se ele for divisível por 5 e falso
+                        caso contrário.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com o dobro de cada
+                        número.</li>
+                    <li>Crie uma função que receba uma lista de strings e retorne uma única string com todas as palavras
+                        concatenadas.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números em ordem
+                        inversa.</li>
+                    <li>Crie uma função que receba uma lista de nomes e retorne o número de nomes na lista.</li>
+                    <li>Crie uma função que receba uma lista de números e um número alvo, e retorne verdadeiro se o
+                        número alvo estiver na lista e falso caso contrário.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne uma nova lista com os números
+                        ordenados em ordem crescente.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne a soma de todos os números pares.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne a soma de todos os números ímpares.
+                    </li>
+                    <li>Crie uma função que receba uma lista de números e retorne o produto de todos eles.</li>
+                    <li>Crie uma função que receba uma lista de strings e retorne a string mais longa da lista.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o segundo maior número da lista.</li>
+                    <li>Crie uma função que receba uma lista de números e retorne o segundo menor número da lista.</li>
+                    <li>Crie uma função que receba uma lista de números e um número alvo, e retorne a quantidade de
+                        vezes que o número alvo aparece na lista.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 11 - Funções Parametrizadas</h2>
+                <ol>
+                    <li>Crie uma função que receba dois números como parâmetros e retorne a soma deles.</li>
+                    <li>Crie uma função que receba um número como parâmetro e outra função como callback. A função
+                        callback deve ser chamada com o número passado como argumento.</li>
+                    <li>Crie uma função que receba uma string e outra função como callback. A função callback deve ser
+                        chamada com a string passada como argumento.</li>
+                    <li>Crie uma função que receba um número como parâmetro e retorne o quadrado desse número. Em
+                        seguida, crie outra função que receba um número e uma função de callback. A função callback deve
+                        ser chamada com o quadrado do número passado como argumento.</li>
+                    <li>Crie uma função que receba um array de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com cada elemento do array.</li>
+                    <li>Crie uma função que receba uma lista de nomes como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com cada nome da lista.</li>
+                    <li>Crie uma função que receba um número e uma função de callback. A função callback deve ser
+                        chamada com o número passado como argumento, seguido pelo seu dobro.</li>
+                    <li>Crie uma função que receba uma string e outra função como callback. A função callback deve ser
+                        chamada com a string em maiúsculas.</li>
+                    <li>Crie uma função que receba dois números como parâmetros e retorne a diferença entre eles. Em
+                        seguida, crie outra função que receba dois números e uma função de callback. A função callback
+                        deve ser chamada com a diferença entre os números como argumento.</li>
+                    <li>Crie uma função que receba um número e uma função de callback. A função callback deve ser
+                        chamada com verdadeiro se o número for par e falso se for ímpar.</li>
+                    <li>Crie uma função que receba um número e uma função de callback. A função callback deve ser
+                        chamada com verdadeiro se o número for positivo e falso se for negativo ou zero.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com a soma de todos os números da lista.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com o maior número da lista.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com o menor número da lista.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com a média dos números da lista.</li>
+                    <li>Crie uma função que receba uma string como parâmetro e outra função como callback. A função
+                        callback deve ser chamada com o número de caracteres na string.</li>
+                    <li>Crie uma função que receba uma lista de nomes como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com o número de nomes na lista.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com verdadeiro se todos os números da lista forem pares e falso
+                        caso contrário.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com verdadeiro se pelo menos um dos números da lista for ímpar
+                        e falso caso contrário.</li>
+                    <li>Crie uma função que receba uma lista de números como parâmetro e outra função como callback. A
+                        função callback deve ser chamada com uma nova lista contendo apenas os números pares da lista
+                        original.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 12 - Funções Diversas</h2>
+                <ol>
+                    <li>Crie uma função que calcule a raiz cúbica de um número sem usar o operador de raiz cúbica.</li>
+                    <li>Crie uma função que determine se um número é um número de Armstrong ou não. (Um número de
+                        Armstrong é um número que é igual à soma dos seus próprios dígitos, cada um elevado à potência
+                        do número total de dígitos.)</li>
+                    <li>Crie uma função que gere números primos até um limite especificado.</li>
+                    <li>Crie uma função que calcule o valor do número π (pi) com base em uma série infinita como a série
+                        de Leibniz.</li>
+                    <li>Crie uma função que calcule o fatorial de um número grande usando uma técnica eficiente, como o
+                        algoritmo de Karatsuba.</li>
+                    <li>Crie uma função que implemente o algoritmo de Euclides estendido para calcular o máximo divisor
+                        comum (MDC) de dois números.</li>
+                    <li>Crie uma função que calcule a sequência de Fibonacci usando uma técnica de memoização para
+                        melhorar o desempenho.</li>
+                    <li>Crie uma função que resolva o problema das Torres de Hanói para um número arbitrário de discos.
+                    </li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação QuickSort de forma recursiva.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca binária em um array ordenado.</li>
+                    <li>Crie uma função que gere todas as combinações possíveis de um conjunto de elementos.</li>
+                    <li>Crie uma função que implemente o algoritmo de Dijkstra para encontrar o caminho mais curto entre
+                        dois vértices em um grafo ponderado.</li>
+                    <li>Crie uma função que implemente o algoritmo A* para encontrar o caminho mais curto em um grid 2D
+                        com obstáculos.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em largura (BFS) em um grafo.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em profundidade (DFS) em um grafo.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando força bruta para encontrar a
+                        rota mais curta.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação MergeSort de forma iterativa.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação HeapSort.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação ShellSort.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação TimSort, que é usado em muitas
+                        linguagens de programação para ordenar arrays eficientemente.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 13 - Funções Desafios</h2>
+                <ol>
+                    <li>Crie uma função que implemente o algoritmo de busca em profundidade (DFS) em um grafo ponderado.
+                    </li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando programação dinâmica para
+                        encontrar a rota mais curta.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação MergeSort de forma recursiva, com
+                        otimização de espaço.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação HeapSort, garantindo estabilidade na
+                        ordenação.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação QuickSort de forma iterativa, usando
+                        pilha.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação TimSort, adaptando-o para trabalhar com
+                        listas encadeadas.</li>
+                    <li>Crie uma função que resolva o problema das Torres de Hanói para um número arbitrário de discos,
+                        considerando a movimentação de discos entre várias torres.</li>
+                    <li>Crie uma função que implemente o algoritmo A* para encontrar o caminho mais curto em um grid 2D
+                        com obstáculos, permitindo movimentos diagonais.</li>
+                    <li>Crie uma função que implemente o algoritmo de Dijkstra para encontrar o caminho mais curto entre
+                        dois vértices em um grafo ponderado com pesos negativos.</li>
+                    <li>Crie uma função que calcule a sequência de Fibonacci usando programação dinâmica com memoização
+                        e otimização de espaço.</li>
+                    <li>Crie uma função que calcule o valor do número π (pi) com alta precisão usando o método de Monte
+                        Carlo.</li>
+                    <li>Crie uma função que calcule o fatorial de um número grande usando o algoritmo de Karatsuba para
+                        multiplicação de inteiros.</li>
+                    <li>Crie uma função que determine se um número é um número de Armstrong ou não, considerando números
+                        com mais de 4 dígitos.</li>
+                    <li>Crie uma função que gere números primos até um limite especificado usando o Crivo de
+                        Eratóstenes.</li>
+                    <li>Crie uma função que calcule a raiz cúbica de um número sem usar o operador de raiz cúbica,
+                        utilizando o método de Newton-Raphson.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca binária em um array ordenado de forma
+                        recursiva, com tratamento de duplicatas.</li>
+                    <li>Crie uma função que gere todas as combinações possíveis de um conjunto de elementos, incluindo
+                        combinações com repetição.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando o algoritmo Branch and Bound
+                        para encontrar a rota mais curta.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação BogoSort e avalie seu desempenho em um
+                        grande conjunto de dados.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação GnomeSort e compare seu desempenho com
+                        outros algoritmos de ordenação.</li>
+                    <li>Crie uma função que resolva o problema do Sudoku usando programação linear inteira (ILP) e uma
+                        biblioteca de otimização.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em largura (BFS) em um grafo direcionado
+                        acíclico (DAG).</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em profundidade (DFS) em um grafo
+                        direcionado acíclico (DAG).</li>
+                    <li>Crie uma função que resolva o problema do fluxo máximo em um grafo com capacidades nas arestas
+                        usando o algoritmo de Ford-Fulkerson.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando o algoritmo de Held-Karp para
+                        encontrar a solução exata em grafos completos.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação Bogosort e avalie seu desempenho em um
+                        grande conjunto de dados.</li>
+                    <li>Crie uma função que resolva o problema do Sudoku usando o algoritmo de backtracking com
+                        heurísticas avançadas.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação SmoothSort, uma variação do HeapSort com
+                        melhor desempenho em casos parcialmente ordenados.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação IntroSort, que combina QuickSort,
+                        HeapSort e InsertionSort para melhor desempenho em diferentes cenários.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação TangleSort, um algoritmo de ordenação
+                        natural inspirado na biologia.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando algoritmos genéticos para
+                        encontrar uma solução aproximada.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação PatienceSort, uma variação do MergeSort
+                        baseada em um jogo de cartas.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação StoogeSort, um algoritmo recursivo de
+                        ordenação com baixo desempenho.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando otimização por enxame de
+                        partículas (PSO) para encontrar uma solução aproximada.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação AmericanFlagSort, uma variação do
+                        RadixSort com melhor desempenho em certos casos.</li>
+                    <li>Crie uma função que resolva o problema do Sudoku usando o algoritmo de busca local Simulated
+                        Annealing.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação TimSort em uma versão paralela para
+                        melhorar o desempenho em sistemas multicore.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em largura (BFS) em um grafo direcionado
+                        acíclico (DAG) em uma versão distribuída.</li>
+                    <li>Crie uma função que implemente o algoritmo de busca em profundidade (DFS) em um grafo
+                        direcionado acíclico (DAG) em uma versão distribuída.</li>
+                    <li>Crie uma função que resolva o problema do fluxo máximo em um grafo com capacidades nas arestas
+                        usando o algoritmo de Push-Relabel.</li>
+                    <li>Crie uma função que resolva o problema do caixeiro-viajante usando o algoritmo de Christofides
+                        para encontrar uma solução aproximada em grafos completos.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação QuantumSort, um algoritmo quântico de
+                        ordenação baseado em computação quântica.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação SleepSort, um algoritmo de ordenação
+                        baseado em threads adormecidas.</li>
+                    <li>Crie uma função que resolva o problema do Sudoku usando o algoritmo de força bruta com
+                        retrocesso e retrocesso limitado.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação TimeSort, um algoritmo de ordenação
+                        baseado em física teórica do tempo.</li>
+                    <li>Crie uma função que implemente o algoritmo de ordenação WaitSort, um algoritmo de ordenação
+                        baseado em espera aleatória.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Lista 14 - Diversos</h2>
+                <ol>
+                    <li>Contagem de Vogais: Crie um programa que conte o número de vogais em uma frase informada pelo usuário.</li>
+                    <li>Contagem de Palavras: Escreva um programa que conte o número de palavras em uma frase.</li>
+                    <li>Verificador de Palíndromo de Frase: Faça um programa que determine se uma frase é um palíndromo (lê-se igual de trás para frente, desconsiderando espaços e pontuação).</li>
+                    <li>Contagem de Letras em uma Palavra: Crie um programa que conte o número de vezes que uma letra específica aparece em uma palavra.</li>
+                    <li>Localizador de Substrings: Faça um programa que verifique se uma frase contém uma determinada palavra ou substring.</li>
+                    <li>Gerador de Acrostico: Escreva um programa que crie um acróstico a partir de uma frase informada pelo usuário, usando a primeira letra de cada palavra.</li>
+                    <li>Validação de Email: Crie um programa que verifique se um endereço de email informado pelo usuário é válido.</li>
+                    <li>Conversor de Texto em Minúsculas: Faça um programa que converta um texto em letras minúsculas.</li>
+                    <li>Conversor de Texto em Maiúsculas: Escreva um programa que converta um texto em letras maiúsculas.</li>
+                    <li>Verificador de Palavras Palíndromas em uma Frase: Crie um programa que encontre e liste todas as palavras palíndromas em uma frase informada pelo usuário.</li>
+                  </ol>
+            </section>
+            <section>
+                <h2>Lista 15- Exemplos do Mundo Real</h2>
+                
+
+                <ol>
+                    <li>Calculadora de Calorias Diárias: Crie um programa que calcule a quantidade de calorias diárias
+                        recomendadas com base na idade, sexo, peso e nível de atividade de uma pessoa.</li>
+                    <li>Simulação de Conta Bancária: Escreva um programa que simule uma conta bancária, permitindo que o
+                        usuário faça depósitos, saques e verifique o saldo.</li>
+                    <li>Monitor de Clima: Faça um programa que exiba a temperatura atual, previsão do tempo e condições
+                        climáticas com base na localização do usuário.</li>
+                    <li>Sistema de Reservas de Voos: Crie um programa que permita aos usuários pesquisar e reservar voos
+                        com base em origem, destino, data e preferências de classe.</li>
+                    <li>Calculadora de Rotas de Viagem: Escreva um programa que calcule a distância e o tempo de viagem
+                        entre duas cidades com base em um banco de dados de estradas e rodovias.</li>
+                    <li>Rastreador de Gastos: Faça um programa que ajude os usuários a registrar e categorizar seus
+                        gastos mensais, fornecendo um resumo das despesas.</li>
+                    <li>Assistente de Compras Online: Crie um programa que auxilie os usuários a encontrar as melhores
+                        ofertas online para produtos específicos, comparando preços em diferentes lojas.</li>
+                    <li>Aplicativo de Fitness: Escreva um programa que acompanhe o progresso do usuário em relação a
+                        metas de condicionamento físico, como contagem de passos, calorias queimadas e tempo de
+                        exercício.</li>
+                    <li>Simulador de Planta de Energia: Faça um programa que simule a operação de uma planta de energia
+                        elétrica, controlando a produção com base na demanda da cidade.</li>
+                    <li>Sistema de Gerenciamento de Biblioteca: Crie um programa que permita aos bibliotecários
+                        catalogar livros, rastrear empréstimos e notificar os usuários sobre datas de devolução.</li>
+                        <li>Desenvolva um programa que analise um texto e conte quantas vezes cada palavra aparece, apresentando as palavras mais frequentes.</li>
+                        <li>Crie um programa que leia um arquivo de texto e gere um resumo automático do conteúdo, destacando as ideias principais.</li>
+                        <li>Escreva um programa que simule um jogo de xadrez, permitindo que dois jogadores movam as peças e verificando quando um jogador vence.</li>
+                        <li>Faça um programa que implemente um algoritmo de busca em largura (BFS) para encontrar o caminho mais curto em um labirinto.</li>
+                        <li>Desenvolva um programa que simule o funcionamento de um sistema de recomendação de filmes com base nas preferências do usuário e nas avaliações de outros usuários.</li>
+                        <li>Crie um programa que analise dados climáticos históricos e preveja o clima futuro com base em modelos matemáticos complexos.</li>
+                        <li>Escreva um programa que implemente um algoritmo genético para resolver um problema de otimização, como a montagem de horários escolares.</li>
+                        <li>Faça um programa que analise grandes conjuntos de dados financeiros e identifique tendências de mercado para tomada de decisões de investimento.</li>
+                        <li>Desenvolva um programa que simule um sistema de controle de tráfego aéreo, gerenciando a decolagem e o pouso de aeronaves em um aeroporto movimentado.</li>
+                        <li>Crie um programa que resolva um quebra-cabeça lógico complexo, como o Sudoku, usando algoritmos de resolução de problemas.</li>
+                        <li>Escreva um programa que analise dados de sensores em tempo real e tome decisões autônomas, como um carro autônomo que evita obstáculos.</li>
+                        <li>Faça um programa que analise grandes volumes de texto para detecção de sentimentos, identificando opiniões positivas e negativas em avaliações de produtos.</li>
+                        <li>Desenvolva um programa que simule a dinâmica de uma economia em um modelo de simulação de Monte Carlo, considerando variáveis econômicas complexas.</li>
+                        <li>Crie um programa que implemente um algoritmo de aprendizado de máquina para reconhecimento de padrões em imagens, como reconhecimento facial.</li>
+                        <li>Escreva um programa que analise grandes conjuntos de dados de redes sociais para identificar tendências e padrões de comportamento dos usuários.</li>
+                        <li>Faça um programa que resolva problemas de otimização complexos, como o problema do caixeiro-viajante, usando algoritmos heurísticos.</li>
+                        <li>Desenvolva um programa que simule a propagação de uma doença em uma população, levando em consideração fatores como taxa de transmissão e medidas de controle.</li>
+                        <li>Crie um programa que implemente um sistema de reconhecimento de voz avançado, permitindo comandos de voz complexos e conversas naturais.</li>
+                        <li>Escreva um programa que analise dados de sequenciamento genético para identificar mutações genéticas e riscos de doenças hereditárias.</li>
+                        <li>Faça um programa que resolva um problema de alocação de recursos em uma empresa, otimizando a distribuição de recursos limitados.</li>
+                </ol>
+            </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="/index.html" class="d-inline-block mb-3">
+                        <img src="/assets/images/logo/logob9 branco.png"   width="220px" alt="logo b9 tech">
+                    </a>
+                    <p class="mb-0">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões em realidade.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Fale Conosco</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Manaus, Am - Brasil</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+55 92 98510-7638</p>
+                    <p><i class="fa fa-envelope me-3"></i>contato@borgonove.tech</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/EricoBorgonove"><i class="fab bi-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://web.facebook.com/erico.borgonove"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/erico.borgonove"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/ericoborgonove/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Educação Tecnológica</h5>
+                    <a class="btn btn-link" href="">Ensino de Programação</a>
+                    <a class="btn btn-link" href="">Cursos Profissionalizantes</a>
+                    <a class="btn btn-link" href="">Educação a Distância</a>
+                    <a class="btn btn-link" href="">Criação de Portfólios</a>
+                    <a class="btn btn-link" href="">Aulas Particulares</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Nossos Serviços</h5>
+                    <a class="btn btn-link" href="">Desenvolvimento de Sites</a>
+                    <a class="btn btn-link" href="">Desenvolvimento de Aplicativos</a>
+                    <a class="btn btn-link" href="">Infraestura de Redes</a>
+                    <a class="btn btn-link" href="">Servidores</a>
+                    <a class="btn btn-link" href="">Máquinas e Equipamentos</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="https://www.borgonove.tech">borgonove.tech</a>, @2024 -  Todos os Direitos Reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/index.html">Home</a>
+                            <!-- <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top pt-2"><i class="bi bi-chevron-double-up""></i> Topo</a>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/scripts/geral.js"></script>
+    <script src="/assets/scripts/buscaCep.js"></script>
+    
+</body>
+</html>

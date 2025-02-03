@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo/logob9-favcon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/styles/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/styles/geral.css" rel="stylesheet">
+    <title>IMC | borgonove.tech</title>
+</head>
+<body>
+    <style>
+        .azul{
+            background-color: lightblue;
+        }
+        .verde{
+            background-color: lightgreen;
+        }
+        .amarelo{
+            background-color: lightyellow;
+        }
+        .laranja{
+            background-color: #FFA54F;
+        }
+        .vermelhoI{
+            background-color: rgb(247, 136, 136);
+        }
+        .vermelhoII{
+            background-color: rgb(226, 90, 90);
+        }
+        .vermelhoIII{
+            background-color: rgb(207, 53, 53)
+        }
+    </style>
+    
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-blue">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="/index.html" class="navbar-brand">
+                    <img src="/assets/images/logo/logob9 branco.png" height="24px" alt="logo b9 tech">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link text-white-50">Portfólio</a>
+                        <a href="" class="nav-item nav-link text-white-50">Serviços</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Matérias</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Exercícios</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/listajs.html" class="dropdown-item">Javascript</a>
+                                <a href="/pages/lista-algoritmo.html" class="dropdown-item">Algoritmos</a>
+                                <a href="/pages/lista-sala.html" class="dropdown-item">Exercícios de Sala</a>
+                                <a href="" class="dropdown-item">-</a>
+                                <a href="" class="dropdown-item">-</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Utilidades</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/pages/buscaCep.html" class="dropdown-item">Busca Cep</a>
+                                <a href="/pages/imc.html" class="dropdown-item">IMC</a>
+                                <a href="" class="dropdown-item">Sorteio Personalidades</a>
+                                <a href="" class="dropdown-item">Relógio de Prova</a>
+                                <a href="" class="dropdown-item">Timer de Prova</a>
+                            </div>
+                        </div>
+                        <a href="/pages/contact.html" class="nav-item nav-link text-white">Contato</a>
+                        <a href="/pages/me.html" class="nav-item nav-link text-white-50">Me</a>
+                        <a href="" class="nav-item nav-link text-white-50">Área de Membros</a>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 hero-header mb-5 bg-blue">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h2 class="display-4 text-white mb-4 animated slideInRight">
+                         <i class="bi bi-person-square display-1 text-white" style="max-height: 300px;">
+                                            </i> Calculo de IMC</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="row justify-content-center">
+                <p class="mb-4">Calcule seu IMC de forma rápida e precisa: nosso serviço simplifica a avaliação do seu índice de massa corporal, ajudando você a entender melhor sua saúde em apenas alguns cliques.</p>
+                <div class="row col-lg align-items-center d-flex align-content-start">
+                    <div class="slider-container col-lg col-sm ">
+                        <label for="alturaSlider">Altura:</label>
+                        <input type="range" class="custom-range" id="alturaSlider" min="0" max="2.2" step="0.01">
+                        <span id="alturaValor"></span> m
+                    </div>
+                    <div class="slider-container col-lg col-sm">
+                        <label for="pesoSlider">Peso:</label>
+                        <input type="range" class="custom-range" id="pesoSlider" min="0" max="200" step="0.5">
+                        <span id="pesoValor"></span> kg
+                    </div>
+                    <div class="col-lg">
+                        <button class="btn btn btn-outline-primary px-4 py-2 mt-1 bg-blue text-white" onclick="calcular()"><i class="fa bi-calculator"></i>&nbsp;Calcular</button>
+                        <button class="btn btn btn-outline-primary px-4 py-2 mt-1 bg-blue text-white" onclick="limpar()"><i class="fa fa-trash"></i>&nbsp;Limpar</button>   
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Função para atualizar o valor da altura
+        function atualizaAltura() {
+            let slider = document.getElementById("alturaSlider");
+            let output = document.getElementById("alturaValor");
+            output.innerHTML = slider.value; // Exibe o valor do slider no span
+
+            slider.oninput = function() {
+                output.innerHTML = this.value; // Atualiza o valor conforme o usuário move o slider
+            }
+        }
+        function atualizaPeso() {
+            let slider = document.getElementById("pesoSlider");
+            let output = document.getElementById("pesoValor");
+            output.innerHTML = slider.value; // Exibe o valor do slider no span
+
+            slider.oninput = function() {
+                output.innerHTML = this.value; // Atualiza o valor conforme o usuário move o slider
+            }
+        }
+
+        // Chama a função quando a página é carregada
+        document.addEventListener("DOMContentLoaded", atualizaAltura);
+        document.addEventListener("DOMContentLoaded", atualizaPeso);
+
+    </script>
+    <div class="container-fluid py-2 mb-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-2">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Peso</th>
+                <th scope="col">Altura</th>
+                <th scope="col">IMC</th>
+                <th scope="col">Faixa</th>
+                <th scope="col">Situação</th>
+                
+            </tr>
+            </thead>
+            <tbody id="linha">
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="/index.html" class="d-inline-block mb-3">
+                        <img src="/assets/images/logo/logob9 branco.png"   width="220px" alt="logo b9 tech">
+                    </a>
+                    <p class="mb-0">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões em realidade.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Fale Conosco</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Manaus, Am - Brasil</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+55 92 98510-7638</p>
+                    <p><i class="fa fa-envelope me-3"></i>contato@borgonove.tech</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/EricoBorgonove"><i class="fab bi-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://web.facebook.com/erico.borgonove"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/erico.borgonove"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/ericoborgonove/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Educação Tecnológica</h5>
+                    <a class="btn btn-link" href="">Ensino de Programação</a>
+                    <a class="btn btn-link" href="">Cursos Profissionalizantes</a>
+                    <a class="btn btn-link" href="">Educação a Distância</a>
+                    <a class="btn btn-link" href="">Criação de Portfólios</a>
+                    <a class="btn btn-link" href="">Aulas Particulares</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Nossos Serviços</h5>
+                    <a class="btn btn-link" href="">Desenvolvimento de Sites</a>
+                    <a class="btn btn-link" href="">Desenvolvimento de Aplicativos</a>
+                    <a class="btn btn-link" href="">Infraestura de Redes</a>
+                    <a class="btn btn-link" href="">Servidores</a>
+                    <a class="btn btn-link" href="">Máquinas e Equipamentos</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="https://www.borgonove.tech">borgonove.tech</a>, @2024 -  Todos os Direitos Reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/index.html">Home</a>
+                            <!-- <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top pt-2"><i class="bi bi-chevron-double-up""></i> Topo</a>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="/assets/scripts/geral.js"></script>
+    <script src="/assets/scripts/imc.js"></script>
+    
+</body>
+</html>
